@@ -39,7 +39,7 @@
 				<div class="logo">
 					<a href="#top"><img src="images/logo01.png" alt="株式会社PixeLoom"></a>
 				</div>
-				<nav class="nav">
+				<nav class="nav" id="header-nav">
 					<ul>
 						<li><a href="#topics" class="c-btn">TOPICS</a></li>
 						<li><a href="#lineup" class="c-btn">LINE UP</a></li>
@@ -47,6 +47,7 @@
 						<li><a href="#contact" class="c-btn">CONTACT</a></li>
 					</ul>
 				</nav>
+				<button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="header-nav"><span></span></button>
 			</header>
 			
 			<!--トップヒーロー部分-->
@@ -518,5 +519,6 @@
 			}
 			window.addEventListener('scroll', checkBottom, { passive: true });
 		</script>
+		<script src="menu.js"></script>
 	</body>
 </html>

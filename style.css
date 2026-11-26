@@ -918,3 +918,447 @@ img {
 		opacity: 1;
 	}
 }
+
+
+/* ==========================================================
+   レスポンシブ対応(ここから下を追加)
+   1200px以下 … ノートPC・タブレット
+   768px以下  … スマホ・タブレット縦向き
+   ========================================================== */
+
+/* ハンバーガーボタン(スマホ幅だけで表示) */
+.hamburger {
+	display: none;
+}
+
+/* ===== 1200px以下 ===== */
+@media (max-width: 1200px) {
+	:root {
+		--side: 6vw;
+		--side-game: 6vw;
+	}
+
+	/* 横幅1440px固定をやめて、画面幅に合わせる */
+	.container {
+		min-width: 0;
+	}
+
+	.game-title {
+		padding-left: var(--side-game);
+	}
+
+	/* ヒーロースライダー：スライドの幅を画面幅の割合にする */
+	.main-tophero {
+		--slide-w: 90%;
+	}
+
+	.slides {
+		gap: 40px;
+	}
+
+	.caption {
+		left: 30px;
+		bottom: 36px;
+	}
+
+	.dots {
+		bottom: 26px;
+	}
+
+	.caption-tags {
+		flex-wrap: wrap;
+	}
+
+	/* トピックス */
+	.topics-list {
+		width: calc(100% - var(--side) * 2);
+	}
+
+	/* ラインナップ：すき間と文字を画面幅に合わせて縮める */
+	.lineup-container {
+		--lineup-gap: clamp(24px, 4vw, 60px);
+		gap: 50px var(--lineup-gap);
+	}
+
+	.lineup-item02::before {
+		left: calc(var(--lineup-gap) / -2);
+	}
+
+	.lineup-item02::after {
+		right: calc(var(--lineup-gap) / -2);
+	}
+
+	.lineup-container .caption-title {
+		font-size: clamp(14px, 1.8vw, 22px);
+	}
+
+	.lineup-container .tag-color li {
+		font-size: clamp(11px, 1.2vw, 14px);
+	}
+
+	/* ゲームページ：ギャラリー */
+	.gallery-stage {
+		width: 100%;
+		max-width: 900px;
+	}
+
+	.thumb {
+		flex: 0 0 calc((100% - 18px) / 4);
+	}
+
+	.thumb img {
+		width: 100%;
+	}
+
+	/* ページトップへ戻るボタン：位置固定をやめて、フッターの中に並べる */
+	.totop {
+		position: static;
+	}
+}
+
+/* ===== 768px以下 ===== */
+@media (max-width: 768px) {
+	:root {
+		--side: 20px;
+		--side-game: 20px;
+	}
+
+	/* 見出し */
+	.c-title-container {
+		padding: 28px 0 24px var(--side);
+	}
+
+	.c-main-title {
+		font-size: 24px;
+	}
+
+	.c-title-slash {
+		font-size: 18px;
+	}
+
+	.c-sub-title {
+		font-size: 14px;
+	}
+
+	/* ヘッダー・フッターの余白 */
+	.header {
+		padding: 16px var(--side);
+	}
+
+	.footer-top {
+		padding: 24px var(--side);
+	}
+
+	/* ヒーロースライダー */
+	.main-tophero {
+		--slide-w: 92%;
+		padding-bottom: 12px;
+	}
+
+	.slides {
+		gap: 12px;
+	}
+
+	.caption {
+		left: 14px;
+		right: 14px;
+		bottom: 30px;
+	}
+
+	.caption-title {
+		font-size: 16px;
+	}
+
+	.caption-tags {
+		gap: 4px;
+	}
+
+	.caption-tags li {
+		font-size: 10px;
+		padding: 2px 6px;
+	}
+
+	.arrow {
+		width: 36px;
+		height: 80px;
+	}
+
+	.arrow::before {
+		width: 16px;
+		height: 48px;
+	}
+
+	.prev {
+		left: calc(50% - var(--slide-w) / 2 + 4px);
+	}
+
+	.next {
+		right: calc(50% - var(--slide-w) / 2 + 4px);
+	}
+
+	.dots {
+		bottom: 20px;
+		gap: 14px;
+	}
+
+	/* トピックス：日付とカテゴリを1行目、タイトルを2行目に */
+	.topics-list li {
+		flex-wrap: wrap;
+		padding: 16px 8px;
+		font-size: 14px;
+	}
+
+	.c-ymd {
+		width: auto;
+		margin-right: 12px;
+	}
+
+	.category {
+		width: auto;
+		margin-right: 0;
+		padding: 2px 10px;
+		font-size: 12px;
+	}
+
+	.topics-list a {
+		width: 100%;
+		margin-top: 8px;
+	}
+
+	/* ラインナップ：1列にする */
+	.lineup-container {
+		grid-template-columns: minmax(0, 520px);
+		gap: 40px;
+	}
+
+	.lineup-item02::before,
+	.lineup-item02::after {
+		display: none;
+	}
+
+	.lineup-container .caption-title {
+		font-size: 18px;
+	}
+
+	.lineup-container .tag-color li {
+		font-size: 12px;
+	}
+
+	/* 会社概要・ゲーム仕様：項目名の下に内容を並べる */
+	.about-alignment-container {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 30px;
+		padding: 10px var(--side) 40px;
+	}
+
+	.about-item-container,
+	.about-map {
+		flex: none;
+		width: 100%;
+	}
+
+	.about-map iframe {
+		height: 300px;
+	}
+
+	.about-item {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.c-about-title,
+	.game-spec .c-about-title {
+		flex: none;
+		padding: 14px 15px 0;
+		font-size: 15px;
+	}
+
+	.c-about-sentence,
+	.game-spec .c-about-sentence {
+		flex: none;
+		padding: 6px 15px 14px;
+		font-size: 14px;
+	}
+
+	/* お問い合わせ */
+	.contact-container {
+		min-height: 0;
+		padding: 50px var(--side);
+	}
+
+	.contact-inner {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 30px;
+	}
+
+	.contact-text-box {
+		flex: none;
+	}
+
+	.contact-text-w01 {
+		font-size: 16px;
+	}
+
+	.contact-text-w02 {
+		font-size: 12px;
+	}
+
+	.contact-btn-box {
+		width: 100%;
+		max-width: 320px;
+	}
+
+	.contact-btn {
+		display: block;
+	}
+
+	/* ゲームページ */
+	.game-top {
+		padding-bottom: 30px;
+	}
+
+	.c-gamepage-subtitle {
+		margin-top: 24px;
+		font-size: 16px;
+	}
+
+	.game-top .caption-title {
+		margin: 20px 0 10px;
+		font-size: 22px;
+	}
+
+	.tag-color {
+		flex-wrap: wrap;
+	}
+
+	.tag-color li {
+		font-size: 13px;
+		padding: 2px 8px;
+	}
+
+	.game-intro {
+		padding: 40px var(--side-game);
+	}
+
+	.game-intro-title {
+		font-size: 18px;
+	}
+
+	.game-intro-text {
+		margin-top: 28px;
+		padding-left: 0;
+		font-size: 15px;
+	}
+
+	.game-gallery {
+		margin-top: 36px;
+	}
+
+	.gallery-stage {
+		border-radius: 12px;
+	}
+
+	.breadcrumb li {
+		font-size: 12px;
+	}
+
+	.breadcrumb li + li::before {
+		margin: 0 6px;
+	}
+
+	/* ヘッダーのナビ：ハンバーガーメニューにする */
+	.hamburger {
+		display: block;
+		width: 44px;
+		height: 44px;
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
+
+	.hamburger span,
+	.hamburger span::before,
+	.hamburger span::after {
+		display: block;
+		width: 28px;
+		height: 4px;
+		background-color: #0F380F;
+		transition: transform 0.3s ease, top 0.3s ease, background-color 0.3s ease;
+	}
+
+	.hamburger span {
+		position: relative;
+		margin: 0 auto;
+	}
+
+	.hamburger span::before,
+	.hamburger span::after {
+		content: "";
+		position: absolute;
+		left: 0;
+	}
+
+	.hamburger span::before {
+		top: -10px;
+	}
+
+	.hamburger span::after {
+		top: 10px;
+	}
+
+	/* 開いているときは「×」の形にする */
+	.is-open .hamburger span {
+		background-color: transparent;
+	}
+
+	.is-open .hamburger span::before {
+		top: 0;
+		transform: rotate(45deg);
+	}
+
+	.is-open .hamburger span::after {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+
+	/* メニュー本体：ヘッダーの下にふわっと出す */
+	.header .nav {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: #A7F070;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-8px);
+		transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+	}
+
+	.header.is-open .nav {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	.header .nav ul {
+		display: block;
+		border-left: none;
+		border-top: 1px solid rgba(0, 0, 0, 0.2);
+	}
+
+	.header .nav li {
+		border-right: none;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	}
+
+	.header .nav a {
+		padding: 18px var(--side);
+	}
+
+	/* フッターのメニューはスマホ幅では非表示 */
+	.footer .nav {
+		display: none;
+	}
+}

@@ -1,0 +1,522 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<!--タイトルを入力-->
+		<title>PixeLoom</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--リセットCSS-->
+		
+		<!--Googleフォント-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		
+		<!--他のページから「index.html#topics」で来たときの、ブラウザの自動ジャンプを止める-->
+		<script>
+			var arrivalHash = location.hash;
+			if (arrivalHash && arrivalHash !== '#top') {
+				try { history.replaceState(null, '', location.href.split('#')[0]); } catch (e) {}
+			}
+		</script>
+		
+		<!--オリジナルのCSS-->
+		<link rel="stylesheet" href="style.css">
+		
+		<!--ファビコン-->
+		<link rel="icon" href="images/icon.png">
+		
+	</head>
+	<body>
+		
+		<!--全体の箱-->
+		<div class="container" id="top">
+			
+			<!--ヘッダー部分-->
+			<header class="header">
+				<div class="logo">
+					<a href="#top"><img src="images/logo01.png" alt="株式会社PixeLoom"></a>
+				</div>
+				<nav class="nav">
+					<ul>
+						<li><a href="#topics" class="c-btn">TOPICS</a></li>
+						<li><a href="#lineup" class="c-btn">LINE UP</a></li>
+						<li><a href="#overview" class="c-btn">OVERVIEW</a></li>
+						<li><a href="#contact" class="c-btn">CONTACT</a></li>
+					</ul>
+				</nav>
+			</header>
+			
+			<!--トップヒーロー部分-->
+			<main class="main-container">
+				<div class="main-tophero slider">
+					<div class="slides">
+						<div class="slide">
+							<a href="game-02.html">
+								<img src="images/eldenring.jpg" alt="ELDENRING">
+							</a>
+							<div class="caption">
+								<p class="caption-title">ELDENRING</p>
+								<ul class="caption-tags">
+									<li>Steam</li><li>PS4</li><li>PS5</li><li>Switch2</li><li>Xbox</li>
+								</ul>
+							</div>
+						</div>
+						<div class="slide">
+							<a href="game-03.html">
+								<img src="images/EFT.jpg" alt="EscapeFromTarkov">
+							</a>
+							<div class="caption">
+								<p class="caption-title">EscapeFromTarkov</p>
+								<ul class="caption-tags">
+									<li>PC</li><li>Steam</li>
+								</ul>
+							</div>
+						</div>
+						<div class="slide">
+							<a href="game-01.html">
+								<img src="images/MHWilds.jpg" alt="モンスターハンターワイルズ">
+							</a>
+							<div class="caption">
+								<p class="caption-title">モンスターハンターワイルズ</p>
+								<ul class="caption-tags">
+									<li>Steam</li><li>PS5</li><li>Switch2</li><li>Xbox</li>
+								</ul>
+							</div>
+						</div>
+						<div class="slide">
+							<a href="game-04.html">
+								<img src="images/SF6-image01.png" alt="ストリートファイター6">
+							</a>
+							<div class="caption">
+								<p class="caption-title">ストリートファイター6</p>
+								<ul class="caption-tags">
+									<li>Steam</li><li>PS4</li><li>PS5</li><li>Switch2</li><li>Xbox</li><li>アーケード</li>
+								</ul>
+							</div>
+						</div>
+						<div class="slide">
+							<a href="game-05.html">
+								<img src="images/overwatch-image01.png" alt="オーバーウォッチ">
+							</a>
+							<div class="caption">
+								<p class="caption-title">オーバーウォッチ</p>
+								<ul class="caption-tags">
+									<li>PC</li><li>Steam</li><li>PS4</li><li>PS5</li><li>Switch</li><li>Switch2</li><li>Xbox</li>
+								</ul>
+							</div>
+						</div>
+						<div class="slide">
+							<a href="game-06.html">
+								<img src="images/CoD_WWII-image01.jpg" alt="Call of Duty: WWII">
+							</a>
+							<div class="caption">
+								<p class="caption-title">Call of Duty: WWII</p>
+								<ul class="caption-tags">
+									<li>Steam</li><li>PS4</li><li>PS5</li><li>Xbox</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<button class="arrow prev" aria-label="前へ"></button>
+					<button class="arrow next" aria-label="次へ"></button>
+					<div class="dots">
+						<button class="dot active" aria-label="1枚目"></button>
+						<button class="dot" aria-label="2枚目"></button>
+						<button class="dot" aria-label="3枚目"></button>
+						<button class="dot" aria-label="4枚目"></button>
+						<button class="dot" aria-label="5枚目"></button>
+						<button class="dot" aria-label="6枚目"></button>
+					</div>
+				</div>
+			</main>
+			
+			<!--トピックス部分-->
+			<div class="topics-container" id="topics">
+				<h2 class="c-title-container">
+					<span class="c-main-title">TOPICS</span>
+					<span class="c-title-slash">/</span>
+					<span class="c-sub-title">トピックス</span>
+				</h2>
+				<ul class="topics-list">
+					<li>
+						<span class="c-ymd">2026年12月10日</span>
+						<span class="category category-event">イベント</span>
+						<a href="#">12月20日からニンテンドーeショップにてウィンターセール開催！</a>
+					</li>
+					<li>
+						<span class="c-ymd">2026年9月17日</span>
+						<span class="category  category-game">ゲーム</span>
+						<a href="#">9月17日 配信パッチ内容のおしらせ</a>
+					</li>
+					<li>
+						<span class="c-ymd">2026年8月13日</span>
+						<span class="category category-event">イベント</span>
+						<a href="#">「○○○○」の先行体験会を8月25日に開催！</a>
+					</li>
+					<li>
+						<span class="c-ymd">2026年7月7日</span>
+						<span class="category category-news">ニュース</span>
+						<a href="#">○○放送にて弊社のゲームが紹介されました！</a>
+					</li>
+					<li>
+						<span class="c-ymd">2026年6月25日</span>
+						<span class="category category-event">イベント</span>
+						<a href="#">7月1日から「PSストア」にてサマーセール開催！</a>
+					</li>
+					<li>
+						<span class="c-ymd">2026年3月15日</span>
+						<span class="category category-event">イベント</span>
+						<a href="#">3月20日から「Steamスプリングセール」開催！</a>
+					</li>
+				</ul>
+			</div>
+			
+			<!--ゲームタイトル一覧部分-->
+			<h2 class="c-title-container lineup-title-container" id="lineup">
+				<span class="c-main-title">LINE UP</span>
+				<span class="c-title-slash">/</span>
+				<span class="c-sub-title">タイトル</span>
+			</h2>
+			<div class="lineup-container">
+				
+				<!-- 1行目（上の段）：中央を lineup-item02 に変更 -->
+				<div class="lineup-item01">
+					<a href="game-02.html">
+						<img src="images/eldenring.jpg" alt="ELDENRING">
+					</a>
+					<p class="caption-title">ELDENRING</p>
+					<ul class="tag-color">
+						<li>Steam</li><li>PS4</li><li>PS5</li><li>Switch2</li><li>Xbox</li>
+					</ul>
+				</div>
+				
+				<div class="lineup-item02">
+					<a href="game-03.html">
+						<img src="images/EFT.jpg" alt="EscapeFromTarkov">
+					</a>
+					<p class="caption-title">EscapeFromTarkov</p>
+					<ul class="tag-color">
+						<li>PC</li><li>Steam</li>
+					</ul>
+				</div>
+				
+				<div class="lineup-item03">
+					<a href="game-01.html">
+						<img src="images/MHWilds.jpg" alt="モンスターハンターワイルズ">
+					</a>
+					<p class="caption-title">モンスターハンターワイルズ</p>
+					<ul class="tag-color">
+						<li>Steam</li><li>PS5</li><li>Switch2</li><li>Xbox</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="lineup-container">
+				
+				<!-- 2行目（下の段） -->
+				<div class="lineup-item01">
+					<a href="game-04.html">
+						<img src="images/SF6-image01.png" alt="ストリートファイター6">
+					</a>
+					<p class="caption-title">ストリートファイター6</p>
+					<ul class="tag-color">
+						<li>Steam</li><li>PS4</li><li>PS5</li><li>Switch2</li><li>Xbox</li>
+					</ul>
+					<ul class="tag-color tag-indention">
+						<li>アーケード</li>
+					</ul>
+				</div>
+				
+				<div class="lineup-item02">
+					<a href="game-05.html">
+						<img src="images/overwatch-image01.png" alt="Overwatch">
+					</a>
+					<p class="caption-title">Overwatch</p>
+					<ul class="tag-color">
+						<li>PC</li><li>Steam</li><li>PS4</li><li>PS5</li><li>Switch</li>
+					</ul>
+					<ul class="tag-color tag-indention">
+						<li>Switch2</li><li>Xbox</li>
+					</ul>
+				</div>
+				
+				<div class="lineup-item03">
+					<a href="game-06.html">
+						<img src="images/CoD_WWII-image01.jpg" alt="Call of Duty: WWII">
+					</a>
+					<p class="caption-title">Call of Duty: WWII</p>
+					<ul class="tag-color">
+						<li>Steam</li><li>PS4</li><li>PS5</li><li>Xbox</li>
+					</ul>
+				</div>
+				
+			</div>
+			
+			<!--会社概要部分-->
+			<div class="about-container" id="overview">
+				<h2 class="c-title-container">
+					<span class="c-main-title">OVERVIEW</span>
+					<span class="c-title-slash">/</span>
+					<span class="c-sub-title">会社概要</span>
+				</h2>
+				<div class="about-alignment-container">
+					<div class="about-item-container">
+						<div class="about-item">
+							<span class="c-about-title">会社名</span>
+							<span class="c-about-sentence">株式会社PixeLoom</span>
+						</div>
+						<div class="about-item">
+							<span class="c-about-title">住所</span>
+							<span class="c-about-sentence">兵庫県○○市□□区△△1234番地56</span>
+						</div>
+						<div class="about-item">
+							<span class="c-about-title">設立</span>
+							<span class="c-about-sentence">2001年1月</span>
+						</div>
+						<div class="about-item">
+							<span class="c-about-title">事業内容</span>
+							<span class="c-about-sentence">国内向けゲームの企画・開発・販売</span>
+						</div>
+					</div>
+					<div class="about-map">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11019.510674429443!2d134.6839843823365!3d34.80291957852716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554e100392687d7%3A0x90e77ccf2c1f5e30!2z44Kz44Oz44OK44OI44Kz44Ot44OL44OP44Oz44OQ44O844KwIOWnq-i3r-mjvuejqOW6lw!5e0!3m2!1sja!2sjp!4v1794271793631!5m2!1sja!2sjp"
+							width="600"
+							height="400"
+							style="border:0;"
+							allowfullscreen=""
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+							title="株式会社PixeLoomの地図">
+						</iframe>
+					</div>
+				</div>
+			</div>
+			
+			<!--お問い合わせ部分-->
+			<div class="contact-container" id="contact">
+				<div class="contact-inner">
+					<div class="contact-text-box">
+						<h2 class="c-title-container">
+							<span class="c-main-title contact-text-g01">CONTACT</span>
+							<span class="c-title-slash">/</span>
+							<span class="c-sub-title contact-text-g02">お問い合わせ</span>
+						</h2>
+						<p class="contact-text-w01">ゲームに関する不具合のご報告や、ご質問は<br>お問い合わせフォームよりご連絡ください。</p>
+						<p class="contact-text-w02">※お問い合わせの内容によっては、返信にお時間をいただく場合や、<br>お答えできない場合もございます。あらかじめご了承ください。</p>
+					</div>
+					<div class="contact-btn-box">
+						<a href="#" class="contact-btn">
+							<img src="images/CONTACT_US.png" alt="CONTACT US">
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--フッター部分-->
+			<footer class="footer">
+				<div class="footer-top">
+					<div class="logo">
+						<a href="#top"><img src="images/logo01.png" alt="株式会社PixeLoom"></a>
+					</div>
+					<nav class="nav">
+						<ul>
+							<li><a href="#topics" class="c-btn">TOPICS</a></li>
+							<li><a href="#lineup" class="c-btn">LINE UP</a></li>
+							<li><a href="#overview" class="c-btn">OVERVIEW</a></li>
+							<li><a href="#contact" class="c-btn">CONTACT</a></li>
+						</ul>
+					</nav>
+					<a href="#top" class="totop" aria-label="ページトップへ戻る"></a>
+				</div>
+				<div class="footer-bottom">
+					<div class="copy">
+						<small>© PixeLoom CORPORATION</small>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script>
+			const viewport = document.querySelector('.main-tophero');
+			const slides = document.querySelector('.slides');
+			const dots = document.querySelectorAll('.dot');
+			const total = dots.length;   // 画像の枚数(6)
+			const INTERVAL = 3000;       // 自動切り替えの間隔(ミリ秒)
+
+			// 端でも左右に隣の画像が見えるように、最初と最後に画像のコピーを足す
+			const first = slides.firstElementChild;
+			const last = slides.lastElementChild;
+			const cloneFirst = first.cloneNode(true);
+			const cloneLast = last.cloneNode(true);
+			cloneFirst.setAttribute('aria-hidden', 'true');
+			cloneLast.setAttribute('aria-hidden', 'true');
+			slides.prepend(cloneLast);   // [3枚目のコピー, 1, 2, 3, 1枚目のコピー]
+			slides.append(cloneFirst);
+
+			let pos = 1;                 // 並びの中の位置(コピーがあるので1枚目は1)
+			let moving = false;          // アニメーション中は連打を無視する
+			let timer;
+
+			// 中央に表示する位置を計算して動かす
+			function update(animate) {
+				const slideW = slides.children[0].offsetWidth;
+				const gap = parseFloat(getComputedStyle(slides).columnGap) || 0;
+				const offset = (viewport.clientWidth - slideW) / 2 - pos * (slideW + gap);
+				slides.style.transition = animate ? 'transform 0.5s ease' : 'none';
+				slides.style.transform = `translateX(${offset}px)`;
+				void slides.offsetWidth;
+
+				const real = (pos - 1 + total) % total;
+				dots.forEach((dot, i) => dot.classList.toggle('active', i === real));
+			}
+
+			function moveTo(n) {
+				if (moving) return;
+				moving = true;
+				pos = n;
+				update(true);
+			}
+
+			// コピーまで来たら、アニメーションなしで本物の位置へ瞬間移動
+			slides.addEventListener('transitionend', (e) => {
+				if (e.target !== slides) return;
+				if (pos === 0) pos = total;
+				if (pos === total + 1) pos = 1;
+				update(false);
+				moving = false;
+			});
+
+			// 自動再生
+			function startAuto() {
+				stopAuto();
+				timer = setInterval(() => moveTo(pos + 1), INTERVAL);
+			}
+			function stopAuto() {
+				clearInterval(timer);
+			}
+
+			// ボタン操作(押したら自動再生のタイマーをリセット)
+			document.querySelector('.prev').addEventListener('click', () => { moveTo(pos - 1); startAuto(); });
+			document.querySelector('.next').addEventListener('click', () => { moveTo(pos + 1); startAuto(); });
+			dots.forEach((dot, i) => {
+				dot.addEventListener('click', () => { moveTo(i + 1); startAuto(); });
+			});
+
+			// マウスが乗っている間は止める
+			viewport.addEventListener('mouseenter', stopAuto);
+			viewport.addEventListener('mouseleave', startAuto);
+
+			window.addEventListener('resize', () => update(false));
+
+			update(false);   // 初期表示
+			startAuto();
+
+			// ===== スクロール =====
+			const HEADER_OFFSET = 0;       // ヘッダーが固定(fixed/sticky)なら、その高さ(px)を入れる
+			const SCROLL_DURATION = 900;   // 移動時間(ミリ秒)。長いほどゆったり
+			const SCROLL_DELAY = 120;      // 押してから動き出すまでのラグ(ミリ秒)
+
+			// 始まりと終わりがゆっくりになる動き
+			const easeInOutCubic = t =>
+				t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+			// 動いている途中のスクロールを止める(連打や手動スクロールとケンカしないように)
+			let scrollTimer;
+			let scrollFrame;
+			let scrolling = false;     // スクロールの動き中かどうか
+			let userMoved = false;     // 自分でスクロール操作をしたかどうか
+			function stopSmoothScroll() {
+				clearTimeout(scrollTimer);
+				cancelAnimationFrame(scrollFrame);
+				scrolling = false;
+			}
+			['wheel', 'touchstart', 'keydown'].forEach(type => {
+				window.addEventListener(type, () => {
+					userMoved = true;
+					stopSmoothScroll();
+				}, { passive: true });
+			});
+
+			// 行き先(getEndY)まで、スクロールする。行き先は毎フレーム計算し直す(画像の読み込みで位置がずれても大丈夫)
+			function smoothScrollTo(getEndY) {
+				stopSmoothScroll();
+				const startY = window.scrollY;
+
+				// 動きを減らす設定の人は、瞬間移動にする
+				const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+				if (reduce) {
+					window.scrollTo(0, getEndY());
+					return;
+				}
+
+				let startTime = null;
+				scrolling = true;
+				function step(now) {
+					if (!startTime) startTime = now;
+					const progress = Math.min((now - startTime) / SCROLL_DURATION, 1);
+					window.scrollTo(0, startY + (getEndY() - startY) * easeInOutCubic(progress));
+					if (progress < 1) {
+						scrollFrame = requestAnimationFrame(step);
+					} else {
+						scrolling = false;
+					}
+				}
+				scrollTimer = setTimeout(() => {
+					scrollFrame = requestAnimationFrame(step);
+				}, SCROLL_DELAY);
+			}
+
+			// このページ内のリンクを押したとき
+			document.querySelectorAll('a[href^="#"]').forEach(link => {
+				link.addEventListener('click', e => {
+					const href = link.getAttribute('href');
+
+					if (href === '#') {
+						// 「#」だけのリンクは、ページの先頭へ
+						e.preventDefault();
+						smoothScrollTo(() => 0);
+						return;
+					}
+
+					const target = document.querySelector(href);
+					if (!target) return;
+					e.preventDefault();
+					smoothScrollTo(() => target.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET);
+				});
+			});
+
+			// 他のページから「index.html#topics」のように来たとき、読み込みを待たずに、ページ上部から動き出す
+			if (arrivalHash && arrivalHash !== '#top') {
+				const arrivalTarget = document.querySelector(arrivalHash);
+				if (arrivalTarget) {
+					const getArrivalY = () => arrivalTarget.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET;
+					window.scrollTo(0, 0);
+					smoothScrollTo(getArrivalY);
+
+					// 画像の読み込みが終わって位置がずれていたら、もう一度合わせる
+					window.addEventListener('load', () => {
+						if (!userMoved && !scrolling && Math.abs(getArrivalY() - window.scrollY) > 2) {
+							smoothScrollTo(getArrivalY);
+						}
+					});
+				}
+			}
+
+			// ===== ページトップへ戻るボタン =====
+			const toTop = document.querySelector('.totop');
+			const BOTTOM_RANGE = 100;   // ページの一番下まで、あと何px以内で出すか
+
+			function checkBottom() {
+				const nearBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - BOTTOM_RANGE;
+				if (nearBottom) {
+					toTop.classList.add('is-show');
+					window.removeEventListener('scroll', checkBottom);   // 一度出したらその場にとどまる
+				}
+			}
+			window.addEventListener('scroll', checkBottom, { passive: true });
+		</script>
+	</body>
+</html>
